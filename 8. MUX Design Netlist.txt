@@ -1,0 +1,67 @@
+* C:\Users\91798\Desktop\Summer\LTSpice Projects\4 BIT ALU\Multiplexer.asc
+V1 Vdd 0 5
+V8 s 0 PWL(0 0 2 0 2.005 5 4 5)
+V22 b1 0 0
+V23 a1 0 0
+M137 N001 a1 Vdd Vdd PMOS
+M138 N001 ~s Vdd Vdd PMOS
+M139 N001 a1 N003 N003 NMOS
+M140 N003 ~s 0 0 NMOS
+M141 N002 b1 Vdd Vdd PMOS
+M142 N002 s Vdd Vdd PMOS
+M143 N002 b1 N005 N005 NMOS
+M144 N005 s 0 0 NMOS
+M145 out_2to1 N001 Vdd Vdd PMOS
+M146 out_2to1 N002 Vdd Vdd PMOS
+M147 out_2to1 N001 N004 N004 NMOS
+M148 N004 N002 0 0 NMOS
+M149 ~s s 0 0 NMOS
+M150 ~s s Vdd Vdd PMOS
+V24 d 0 5
+V25 c 0 5
+M151 ~s0 s0 0 0 NMOS
+M152 ~s0 s0 Vdd Vdd PMOS
+M153 ~s1 s1 0 0 NMOS
+M154 ~s1 s1 Vdd Vdd PMOS
+M155 aout a Vdd Vdd PMOS
+M156 aout ~s0 Vdd Vdd PMOS
+M157 aout a P001 P001 NMOS
+M158 P001 ~s0 P002 P002 NMOS
+M159 P002 ~s1 0 0 NMOS
+M160 aout ~s1 Vdd Vdd PMOS
+M161 bout b Vdd Vdd PMOS
+M162 bout ~s0 Vdd Vdd PMOS
+M163 bout b P003 P003 NMOS
+M164 P003 ~s0 P004 P004 NMOS
+M165 P004 s1 0 0 NMOS
+M166 bout s1 Vdd Vdd PMOS
+M167 cout c Vdd Vdd PMOS
+M168 cout s0 Vdd Vdd PMOS
+M169 cout c P005 P005 NMOS
+M170 P005 s0 P006 P006 NMOS
+M171 P006 ~s1 0 0 NMOS
+M172 cout ~s1 Vdd Vdd PMOS
+M173 dout d Vdd Vdd PMOS
+M174 dout s0 Vdd Vdd PMOS
+M175 dout d P007 P007 NMOS
+M176 P007 s0 P008 P008 NMOS
+M177 P008 s1 0 0 NMOS
+M178 dout s1 Vdd Vdd PMOS
+V26 b 0 0
+V27 a 0 PWL(0 0 2 0 2.005 5 3 5)
+M179 out_4to1 aout Vdd Vdd PMOS
+M180 out_4to1 cout Vdd Vdd PMOS
+M181 out_4to1 aout P009 P009 NMOS
+M182 P009 bout P010 P010 NMOS
+M183 P010 cout P011 P011 NMOS
+M184 out_4to1 dout Vdd Vdd PMOS
+M185 P011 dout 0 0 NMOS
+M186 out_4to1 bout Vdd Vdd PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\91798\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 16
+* 2:1 MUX
+* 4:1 MUX
+.backanno
+.end
