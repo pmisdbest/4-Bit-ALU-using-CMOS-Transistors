@@ -70,9 +70,6 @@ The repository includes detailed circuit diagrams for:
 | 110 | Increment | A + 1 |
 | 111 | Left Shift | A << 1 |
 
-## File Structure
-
-
 ## Design Methodology
 
 1. **Bottom-up Approach**: Started with basic CMOS logic gates
