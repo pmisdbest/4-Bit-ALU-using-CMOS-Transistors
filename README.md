@@ -133,12 +133,6 @@ Pratham Maan
 - GitHub: @pmisdbest
 - Email: prathammaan7@gmail.com
 
-## Acknowledgments
-
-- Thanks to the digital design community for CMOS design principles
-- Reference materials from computer architecture textbooks
-- Open source EDA tools for circuit simulation
-
 ---
 
 *This project demonstrates the fundamental principles of digital logic design using CMOS technology, providing a complete working ALU implementation from transistor level to functional operation.*
